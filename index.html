@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>This one is for my Varchhu</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*O CÓDIGO DO AMOR</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Oii Amor!<br />
+			Você se lembra do dia em que nos conhecemos?<br />
+			<span class="comments">// Em uma quinta-feira. </span><br />
+			Te vi em camera lenda, apaixonei mais do que já estava;<br />
+			<span class="comments">// Seu rosto, sua voz, suas palavras.</span><br />
+			Seu tudo ficou impresso em meu coração;<br />
+			Conforme o tempo passou;<br />
+			Minha paixão ficou cada vez mais forte;<br />
+			Jornada da paixão ao amor;<br />
+			Nós viajamos um longo caminho juntos;<br />
+			Houve brigas ;<br />
+			<span class="comments">// E tenho certeza que haverá mais.</span><br />
+			Mas nosso amor sempre crescerá mais forte;<br />
+			<br>
+			<br>
+			Tudo que eu quero dizer é:<br />
+			Amor, eu vou te amar para sempre;<br />
+			<br>
+			<br>
+			Agora se você quiser me abraçar você pode tocar o coração abaixo<br />
+			<br>
+			<span id="heartspan">
+			<a href="/assets/WhatsApp Image 2024-06-04 at 20.55.54 (1).jpeg" target="_blank"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+			<span id="heartspan">
+				<a href="/assets/WhatsApp Image 2024-06-04 at 20.55.54.jpeg" target="_blank"><i class="fas fa-heart" id="icon"></i></a>
+				</span>
+			
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Estarei com você para sempre!
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					EU TE AMO MUITO<br/>
+					<div class="signature">- VITOR</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2020, 9, 16);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
